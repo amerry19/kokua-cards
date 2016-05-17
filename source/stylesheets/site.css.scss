@@ -45,6 +45,13 @@ button {
   }
 }
 
+// This probably needs to be on the body to get the full height
+// working
+.background-wrapper {
+  background-image: url("/images/bg-kokua-cards.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 /* ID + Class level styles */
 #title {
