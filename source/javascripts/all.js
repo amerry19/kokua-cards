@@ -36,4 +36,3 @@ $(function () {
       $grammarArticle.show();
   })
 });
-

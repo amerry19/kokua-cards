@@ -4,42 +4,45 @@
 
 /* mq overrides */
 $mq-breakpoints: (
-    mobile:  320px,
-    tablet:  600px,
-    desktop: 980px,
-    wide:    1300px
-);
+  mobile:  320px,
+  tablet:  600px,
+  desktop: 980px,
+  wide:    1300px
+  );
 @import 'vendor/_mq';
 
 /* Variables */
-$primary : #1d4c76;
+$dark-blue: #1d4c76;
 $light-teal: #8ddcd7;
-$secondary: #e06f54;
+$dark-peach: #e06f54;
 $circle-size: 2.5em;
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
 
 /* Body + native element declarations */
 body {
   text-align: center;
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Avenir-Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1em;
-  color: $primary;
-}
-
-section:not(:nth-last-of-type(2)) {
-  @include teal-line; 
-  .body-padding, p {
-    margin: 1em 2em 0 2em;
-  }
+  color: $dark-blue;
 }
 
 button {
-  width: 110px;
-  height: 30px;
+  padding: 0px 20px;
+  height: 60px;
+  min-width: 110px;
+  margin: 20px;
   border: transparent 1px;
-  border-radius: 15px;
-  background-color: $secondary;
+  border-radius: 30px;
+  background-color: $dark-peach;
   color: white;
+  font-family: "Avenir-Heavy", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  a { color: #fff; }
   
+
   &.sign-up {
     margin-top: 1em;
   }
@@ -47,14 +50,30 @@ button {
 
 // This probably needs to be on the body to get the full height
 // working
-.background-wrapper {
-  background-image: url("/images/bg-kokua-cards.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+.top {
+  background-image: url("/images/bg-kokua-cards@3x.png");
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  /*background-size: cover; */
+  padding: 3em 2.5em;
 }
 
+.intro {
+  font-family: Avenir-Book;
+  font-size: 24px;
+  line-height: 1.5;
+  color: #ffffff;
+}
+
+#interested {
+  font-family: Avenir-Book;
+  font-size:16px;
+  line-height: 1.7;
+  letter-spacing: -0.2px;
+  color: $dark-blue;
+}
 /* ID + Class level styles */
-#title {
+/*#title {
   font-family: 'Alegreya Sans', sans-serif;
   color: $primary;
   font-size: 95px;
@@ -63,59 +82,140 @@ button {
   line-height: 0.8;
   font-weight: lighter;
   margin-bottom: .5em;
-  
+
   @include mq($from: tablet, $until: desktop){
     word-spacing: normal
   }
   @include mq($from: desktop, $until: wide){
-    
+
   }
-}
+}*/ /*responsiveness example!!!*/
+
 h2 {
-  font-weight: 100;
+  font-family: Avenir-Medium;
+  font-size: 30px;
+  line-height: 0.8;
+  color: $dark-blue;
 }
-.kokua-means {
-  font-style: italic;
+
+p {
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #how-it-works-wrapper{
-  padding-bottom: 0px;
+  padding: 3em 1em;
 }
 
 #sign-up-wrapper {
+  padding: 3em 2.5em;
   background-color: $light-teal;
-  
-  h2 {
-    padding-top: .5em;
-  }
+
 }
 
 .how-it-works-list {
-   -webkit-padding-start: 0px;
+ -webkit-padding-start: 0px;
+ margin: 3em auto 1em auto;
+ max-width: 560px;
+
+ li {
+  -webkit-padding-start: 0px;
+
+    @include mq($from: tablet, $until: desktop){
+        text-align: left;
+      }
+     @include mq($from: desktop, $until: wide){
+        text-align: left;
+      }
+
   
-  li {
-    -webkit-padding-start: 0px;
-    
-    list-style: none;
-    padding: 0 2em 2em 2em;
-    
-    span {
-      display: block;
-      height: $circle-size;
-      width: $circle-size;
-      line-height: $circle-size;
-      -moz-border-radius: 30px;
-      border-radius: 30px;
-      background-color: $primary;
-      color: white;
-      text-align: center;
-      font-size: 1em;
-      margin-left: calc(50% - #{$circle-size}/2);
-      margin-bottom: .5em;
+  list-style: none;
+  padding: 0 2em 2em 2em;
+  
+  /* how it works circles */
+  span { 
+    display: block;
+    height: $circle-size;
+    width: $circle-size;
+    line-height: $circle-size;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    background-color: $dark-blue;
+    color: white;
+    text-align: center; /* alignment of number inside circle */
+    font-size: 1em;
+    margin-left: calc(50% - #{$circle-size}/2);
+    margin-bottom: .5em; 
+
+      @include mq($from: tablet, $until: desktop){
+        float: left;
+        margin-left: 0;
+        margin-right: 1em;
+      }
+     @include mq($from: desktop, $until: wide){
+        float: left;
+        margin-left: 0;
+        margin-right: 1em;
+      }
+
     }
   }
 }
 
+span#step-1 {
+      @include mq($from: tablet, $until: desktop){
+        margin-top: -0.4em;
+      }
+     @include mq($from: desktop, $until: wide){
+        margin-top: -0.4em;
+      } 
+}
+
+span#step-3 {
+      @include mq($from: tablet, $until: desktop){
+        margin-top: -0.4em;
+      }
+     @include mq($from: desktop, $until: wide){
+        margin-top: -0.4em;
+      } 
+}
+
+form#newsletter-signup {
+    color: #fff;
+    font-size: 24px;
+    font-family: Avenir-Book;
+}
+
 #user-type {
   display: inline-block;
+}
+
+.select-wrapper input.select-dropdown {
+  font-size: 24px;
+  border-bottom: 2px solid #fff;
+  width: 160px;
+}
+
+input[type=email] {
+  font-size: 24px;
+  border-bottom: 2px solid #fff;
+}
+
+.input-field label {
+    color: #ffffff;
+}
+
+.input-field.col.s12 {
+    max-width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.input-field label { 
+  left: 0rem;
+}
+
+.select-wrapper span.caret {
+    color: #fff;
 }
