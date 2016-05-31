@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+
+  <!-- Use title if it's in the page YAML frontmatter -->
+  <title>
+    Middleman
+  </title>
+
+  <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:100' rel='stylesheet' type='text/css'>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+
+  <link href="/stylesheets/site.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+      <script src="/javascripts/all.js"></script>
+      
+</head>
+
+<body class="index">
+  <!-- intro -->
+<div class="top">
+	<img src="../images/logo-kokua-cards@3x.png" width="208">
+	<section class="who-are-we">
+		<p class="intro body-padding">
+			Our greeting cards support progressive social, environmental, and humanitarian&nbsp;causes.
+		</p>
+	</section>
+	<section>
+		<div id="interested">
+			<p>Leave us your email and we'll contact you when we&nbsp;launch!</p>
+			<button class="sign-up"><a href="#sign-up-wrapper">Sign up</a></button>
+		</div>
+	</section>
+</div>
+
+<!-- how it works-->
+<section id="how-it-works-wrapper">
+	<p>kō.kua (Hawaiian) verb, noun: mutual help to others</p>
+	<img src="../images/rule@3x.png" width="53">
+	<h2>How it works</h2>
+	<ul class="how-it-works-list body-padding">
+		<li>
+			<span id="step-1">1</span> Artists design cards for a cause they are passionate about.
+		</li>
+		<li>
+			<span>2</span> Kokua Cards reaches out to nonprofits that matches the artist's passion and we start the creative process!
+		</li>
+		<li>
+			<span id="step-3">3</span> Both the artist and nonprofit receive 10% of our sales&nbsp;proceeds
+		</li>
+	</ul>
+</section>
+
+<!-- sign up -->
+<section id="sign-up-wrapper">
+	<h2>Sign up</h2>
+
+	<p class="body-padding">Please sign up to receive our latest updates and deals for our very first greeting card collection! Mahalo!</p>
+
+	<form class="body-padding" accept-charset="UTF-8" id="newsletter-signup" action="https://zapier.com/hooks/catch/576243/ugcqew/" method="POST">
+		<input type="hidden" name="utf8" value="✓">
+		<div>
+			<div id="row">I am a<span id="grammar-article">n</span>&nbsp;
+				<div id="user-type" class="input-field">
+					<select name="type">
+						<option value="individual">individual</option>
+						<option value="artist">artist</option>
+						<option value="non profit">non-profit</option>
+					</select>
+				</div>
+			</div>
+			<span id="individual-cta">interested in supporting non-profits and artists. Let me know when I can buy a card.</span>
+			<span id="non-profit-cta">interested in working with Kokua Cards.</span>
+			<span id="artist-cta">interested in designing cards for non-profits.</span>
+		</div>
+		<div class="input-field col s12">
+			<input name="email" id="email" type="email" class="validate">
+			<label for="email">Email</label>
+		</div>
+
+		<button class="sign-up" type="submit"><img src="../images/arrow-right@3x.png" width="16"></button>
+	</form>
+</section>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-77064720-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+
+
+</html>
