@@ -1,12 +1,19 @@
 // This is where it all goes :)
 $(function () {
 
-  var $grammarArticle = $("#grammar-article");
+  var $grammarArticle = $("#grammar-article"),
+      $artistCta = $("#artist-cta"),
+      $individualCta = $("#individual-cta"),
+      $nonProfitCta = $("#non-profit-cta"),
+      ctaArr = [$artistCta, $individualCta, $nonProfitCta];
+      
   
   $('select').material_select();
 
   $('#newsletter-signup').submit(function (event) {
     event.preventDefault();
+    if ($("#email").val().indexOf('@') === -1)
+      return;
 
     var formEl = $(this);
     var submitButton = $('input[type=submit]', formEl);
@@ -23,16 +30,35 @@ $(function () {
       }
     }).done(function (data) {
       submitButton.prop('disabled', false);
-      console.log(data)
     });
   });
 
 
   $("#user-type select").change(function () {
-
-    if ($(this).val() == "non profit")
+    var $selection = $(this).val();
+    
+    if ($selection === "non profit"){
       $grammarArticle.hide();
-    else
+      displaySingleCta($nonProfitCta, ctaArr);
+    }
+    else{
       $grammarArticle.show();
+    }
+    if ($selection === "artist"){
+      displaySingleCta($artistCta, ctaArr);
+    }
+    if ($selection === "individual"){
+      displaySingleCta($individualCta, ctaArr);
+    }
   })
+  
+  function displaySingleCta($cta, ctaArr){
+    for (var i = 0; i < ctaArr.length; i++){
+      if (ctaArr[i] !== $cta){
+        $(ctaArr[i]).hide();
+      } else {
+        $(ctaArr[i]).show();
+      }
+    }
+  }
 });

@@ -72,24 +72,6 @@ button {
   letter-spacing: -0.2px;
   color: $dark-blue;
 }
-/* ID + Class level styles */
-/*#title {
-  font-family: 'Alegreya Sans', sans-serif;
-  color: $primary;
-  font-size: 95px;
-  word-wrap: normal;
-  word-spacing: 1000px;
-  line-height: 0.8;
-  font-weight: lighter;
-  margin-bottom: .5em;
-
-  @include mq($from: tablet, $until: desktop){
-    word-spacing: normal
-  }
-  @include mq($from: desktop, $until: wide){
-
-  }
-}*/ /*responsiveness example!!!*/
 
 h2 {
   font-family: Avenir-Medium;
@@ -218,4 +200,12 @@ input[type=email] {
 
 .select-wrapper span.caret {
     color: #fff;
+}
+
+#non-profit-cta {
+  display: none;
+}
+
+#artist-cta {
+  display: none;
 }

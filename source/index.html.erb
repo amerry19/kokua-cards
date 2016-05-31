@@ -38,22 +38,24 @@
 
 	<p class="body-padding">Please sign up to receive our latest updates and deals for our very first greeting card collection! Mahalo!</p>
 
-	<form class="body-padding" accept-charset="UTF-8" id="newsletter-signup" action="https://formkeep.com/f/aceb3664c74f" method="POST">
+	<form class="body-padding" accept-charset="UTF-8" id="newsletter-signup" action="https://zapier.com/hooks/catch/576243/ugcqew/" method="POST">
 		<input type="hidden" name="utf8" value="✓">
 		<div>
 			<div id="row">I am a<span id="grammar-article">n</span>&nbsp;
 				<div id="user-type" class="input-field">
-					<select>
+					<select name="type">
 						<option value="individual">individual</option>
 						<option value="artist">artist</option>
 						<option value="non profit">non-profit</option>
 					</select>
 				</div>
 			</div>
-			interested in supporting nonprofits and independent&nbsp;artists.
+			<span id="individual-cta">interested in supporting non-profits and artists. Let me know when I can buy a card.</span>
+			<span id="non-profit-cta">interested in working with Kokua Cards.</span>
+			<span id="artist-cta">interested in designing cards for non-profits.</span>
 		</div>
 		<div class="input-field col s12">
-			<input id="email" type="email" class="validate">
+			<input name="email" id="email" type="email" class="validate">
 			<label for="email">Email</label>
 		</div>
 
