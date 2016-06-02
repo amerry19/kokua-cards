@@ -29,7 +29,7 @@ $(function () {
         submitButton.prop('disabled', 'disabled');
       }
     }).done(function (data) {
-      submitButton.prop('disabled', false);
+      $("#submit-email").replaceWith("<p style='color:#1d4c76; text-align: center;'>Thanks for subscribing. We'll keep in touch.</p>")
     });
   });
 
